@@ -1,0 +1,488 @@
+.button {
+   
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 50%;
+    border: none;
+  }
+
+  .button2 {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .button2:hover {
+    opacity: 0.8;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    height: 35%;
+    border-radius: 50%;
+  }
+
+  .avatar {
+    vertical-align:text-top;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 10;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+
+
+  .button3 {
+    width: auto;
+    padding: 10px 30px;
+    background-color: #f44336;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+  }
+  .button3:hover {
+    opacity: 0.8;
+  }
+
+  .success {
+    border-color: white;
+    color: white;
+    
+}
+
+.success:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+.danger {
+    border-color: white;
+    color: white;
+
+}
+
+.danger:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.success2 {
+  background-color:#4CAF50 ;
+  
+  color: white;
+  
+}
+
+.success2:hover {
+  background-color: #04aa6d;
+  color: white;
+}
+.danger2 {
+  background-color: rgb(233, 61, 61);
+  color: white;
+
+}
+
+.danger2:hover {
+  background-color: rgb(248, 7, 7);
+  color: white;
+}
+
+
+.b1 {
+  background-color: rgb(247, 247, 247);
+  color: rgb(0, 0, 0);
+  opacity: 0.7;
+}
+
+.button5 {
+  background-color:rgb(245, 185, 21);
+  border: none;
+  color: black;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.button5:hover {
+  background-color: rgb(230, 186, 66);
+}
+
+p {
+  font-family: Lato;
+}
+
+
+
+.container a {
+
+	color: rgb(255, 255, 255);
+}
+
+#project1 a:hover {
+	color: rgb(255, 0, 0);
+}
+
+
+
+a {
+  
+    text-decoration: none;
+}
+.button9 {
+    background-color: rgb(24, 189, 3);
+    border: none;
+    color: black;
+    padding: 10px 214px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px ;
+    margin-top: 15px ;
+    margin-left: 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+  
+  .button9:hover {
+    background-color: #24b906;
+  }
+
+  .btn {
+    
+    
+    color: rgb(255, 255, 255);
+    
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .danger5 {
+    border-color: rgb(243, 13, 82);
+    padding: 14px 50px;
+    
+  }
+  
+  .danger5:hover {
+    opacity: 30px;
+    background-color: rgb(243, 13, 82);
+    color: white;
+  }  
+
+  .button10 {
+    background-color: rgb(46, 140, 228);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 35px;
+    margin-left: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .button10:hover {
+    background-color: #000000;
+    color: white;
+    
+  }
+
+
+  
+  .fr1{
+    background-color: rgb(236, 255, 206);
+}
+
+.fc{
+    float:left;
+}
+.panel-body {
+    overflow-y: scroll;
+    height: 300px;
+}
+.fl{
+    float:right;
+}
+
+.c{
+    float:center;
+}
+
+.avatar1 {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.sb{
+  overflow: scroll;
+}
+
+.button {
+   
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 50%;
+    border: none;
+  }
+
+  .button2 {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .button2:hover {
+    opacity: 0.8;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    height: 35%;
+    border-radius: 50%;
+  }
+
+  .avatar {
+    vertical-align:text-top;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 10;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+
+
+  .button3 {
+    width: auto;
+    padding: 10px 30px;
+    background-color: #f44336;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+  }
+  .button3:hover {
+    opacity: 0.8;
+  }
+
+  .success {
+    border-color: white;
+    color: white;
+    
+}
+
+.success:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+.danger {
+    border-color: white;
+    color: white;
+
+}
+
+.danger:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.success2 {
+  background-color:#4CAF50 ;
+  
+  color: white;
+  
+}
+
+.success2:hover {
+  background-color: #04aa6d;
+  color: white;
+}
+.danger2 {
+  background-color: rgb(233, 61, 61);
+  color: white;
+
+}
+
+.danger2:hover {
+  background-color: rgb(248, 7, 7);
+  color: white;
+}
+
+
+.b1 {
+  background-color: rgb(247, 247, 247);
+  color: rgb(0, 0, 0);
+  opacity: 0.7;
+}
+
+.button5 {
+  background-color:rgb(245, 185, 21);
+  border: none;
+  color: black;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.button5:hover {
+  background-color: rgb(230, 186, 66);
+}
+
+p {
+  font-family: Lato;
+}
+
+
+
+.container a {
+
+	color: rgb(255, 255, 255);
+}
+
+#project1 a:hover {
+	color: rgb(255, 0, 0);
+}
+
+
+
+a {
+  
+    text-decoration: none;
+}
+.button9 {
+    background-color: rgb(24, 189, 3);
+    border: none;
+    color: black;
+    padding: 10px 214px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px ;
+    margin-top: 15px ;
+    margin-left: 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+  
+  .button9:hover {
+    background-color: #24b906;
+  }
+
+  .btn {
+    
+    
+    color: rgb(255, 255, 255);
+    
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .danger5 {
+    border-color: rgb(243, 13, 82);
+    padding: 14px 50px;
+    
+  }
+  
+  .danger5:hover {
+    opacity: 30px;
+    background-color: rgb(243, 13, 82);
+    color: white;
+  }  
+
+  .button10 {
+    background-color: rgb(46, 140, 228);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 35px;
+    margin-left: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .button10:hover {
+    background-color: #000000;
+    color: white;
+    
+  }
+
+
+  
+  .fr1{
+    background-color: rgb(236, 255, 206);
+}
+
+.fc{
+    float:left;
+}
+.panel-body {
+    overflow-y: scroll;
+    height: 300px;
+}
+.fl{
+    float:right;
+}
+
+.c{
+    float:center;
+}
+
+.avatar1 {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.sb{
+  overflow: scroll;
+}
+

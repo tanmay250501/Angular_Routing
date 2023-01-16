@@ -1,0 +1,117 @@
+<div class="col-lg-12" style="margin-top: 120px;">
+
+  <div class="mb-3 mt-3">
+    <p style="color: white;">
+      <button type="button" class="button5" style="margin-left:95%;" tooltip="Add Staff Member" placement="bottom"
+        (click)="openModal2(stafftemplate,null)"><i class='fa fa-user-plus'></i></button>
+
+    </p>
+    <a class="form-heading" style="color: rgb(0, 0, 0);margin-left: 43%;font-size: 30px;"><b>STAFF
+        LIST</b></a>
+  </div>
+  <div class="w3-card-4 ">
+    <table class="table table-bordered table-dark  table-hover" style="color: rgb(255, 255, 255); margin-top: 60px;">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Customer Name</th>
+          <th scope="col">Mail Id</th>
+          <th scope="col">Contact No</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of staff;let i=index">
+          <th scope="row">{{i + 1}}.</th>
+          <td>{{s.staffName}}</td>
+          <td>{{s.staffId}}</td>
+          <td>{{s.staffPhone}}</td>
+          <td> <button style="color: rgb(255, 255, 255);;" class="btn  fr" tooltip="Edit"
+              (click)="openModal2(editstafftemplate,i)" placement="bottom"><span class='bi bi-pencil-square'
+                style="font-size: 20px;"></span></button>
+            <button style="color: red;font-size: 18px;" class="btn  fr" (click)="deletestaff(i)" tooltip="Delete"
+              placement="bottom"><i class="fas fa-user-alt-slash" aria-hidden="true"></i></button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<ng-template #stafftemplate>
+  <form [formGroup]="staffForm">
+    <div class="modal-body" style="background-color:#7824a8">
+      <div class="mb-3 mt-3">
+        <button type="button" class="btn-close close" aria-label="Close" (click)="closestaff()">
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+        <h1><a style="color: rgb(255, 255, 255);margin-left: 10%;"><b>Add Staff Memeber</b></a></h1>
+      </div>
+      <div class="container mt-3" style="color: rgb(255, 255, 255);">
+
+        <div class="mb-3 mt-3">
+          <label for="text" style="margin-bottom:5px"><b>Memeber Name</b></label>
+          <input class="form-control" placeholder="Enter your Name" formControlName="staffName" />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="text" style="margin-bottom:5px"><b>Post</b></label>
+          <input class="form-control" placeholder="Jr. Developer" formControlName="staffPost" />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="text" style="margin-bottom:5px"><b>Mail Id</b></label>
+          <input  class="form-control" placeholder="example@gmail.com" formControlName="staffId" />
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="text" style="margin-bottom:5px"><b>Contact Number</b></label>
+          <input class="form-control" placeholder="+91 12345 67890" formControlName="staffPhone" />
+        </div>
+        <div class="mb-3 mt-3" style="margin-top: 10px;">
+          <button type="button" class=" btn-danger button" (click)="clear()"><b>Clear</b></button>
+          <button type="submit" class=" btn-success button" (click)="submitstaff()"
+            ><b>Submit</b></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</ng-template>
+
+
+
+
+
+
+
+<ng-template #editstafftemplate>
+  <form [formGroup]="staffForm">
+    <!-- Modal body -->
+    <div class="modal-body" style="background-color:#7824a8;color: white;">
+      <button type="button" class="btn-close close" aria-label="Close" (click)="closestaff()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+      <h1 class="modal-title " style="margin-left: 28%;">Update Info</h1>
+      <div class="mb-3 mt-3">
+        <label for="text" style="margin-bottom:5px">Memeber Name</label>
+        <input type="text" class="form-control" placeholder="Enter your Name" formControlName="staffName">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="text" style="margin-bottom:5px">Post</label>
+        <input type="text" class="form-control" placeholder="Jr. Developer" formControlName="staffPost">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="text" style="margin-bottom:5px">Mail Id</label>
+        <input type="email" class="form-control" placeholder="example@gmail.com" formControlName="staffId">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="text" style="margin-bottom:5px">Contact Number</label>
+        <input type="text" class="form-control" placeholder="+91 12345 67890" formControlName="staffPhone">
+      </div>
+      <button type="button" class="btn-danger button" (click)="clear()"><b>Clear</b></button>
+      <button type="submit" class="btn-success button" (click)="updatestaff()"><b>Update</b></button>
+    </div>
+
+
+
+  </form>
+</ng-template>

@@ -1,0 +1,146 @@
+<div class="row">
+  <div class="col-lg-12" style="padding-left: 1px; padding-right: 15px;margin-top: -15px ;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top"
+      style="margin-bottom: 10px;box-shadow: 2px 2px 2px #aaa;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" >
+        <h3 class="nav-link" onclick="topFunction()" style="color: rgb(0, 0, 0);cursor: pointer;height: 30px;"><img src="https://sandiegocarcare.com/wp-content/uploads/2018/02/logo.png">
+        </h3>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0"
+          style="font-family:sans-serif; font-size: 15px; padding-left: 10%;cursor: pointer; ">
+          <li class="nav-item active" routerLink='home'>
+            <a class="nav-link"  style=" padding-right: 30px;">HOME</a>
+          </li>
+          <li class="nav-item" routerLink='cars'>
+            <a class="nav-link" style=" padding-right: 30px;">CARS</a>
+          </li>
+          <li class="nav-item" routerLink="parts">
+            <a class="nav-link " style=" padding-right: 30px;">PARTS</a>
+          </li>
+          <li class="nav-item" routerLink="staff">
+            <a class="nav-link " style=" padding-right: 30px;">STAFF</a>
+          </li>
+          <li class="nav-item" routerLink="customer">
+            <a class="nav-link " style=" padding-right: 30px;">CUSTOMER</a>
+          </li>
+          <li class="nav-item" routerLink="customer">
+            <a class="nav-link " style=" padding-right: 30px;" (click)="openModal(signuptemplate,null)">Sign Up</a>
+          </li>
+  
+        </ul>
+
+      </div>
+      <form class="form-inline my-2 my-lg-0">
+        <!-- <button class="btn " href="#myModal" c data-toggle="modal" style="margin-left:-20px">Login <img src="assets/login.png"></button> -->
+        <button class="btn0 " (click)="openModal(logintemplate,null)">Login <img src="assets/login.png"></button>
+      </form>
+    </nav>
+
+
+    
+
+
+<!--style="background-image: url('assets/b7.jpg');background-repeat: no-repeat;background-size:cover;height: 650px;"-->
+<!--car List-->
+
+
+
+<!--staff List-->
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ng-template #logintemplate>
+
+  <!-- Modal body -->
+  <div class="modal-body" style="background-color:#d612a5;color: white;">
+    <button type="button" class="btn-close close" aria-label="Close" (click)="clear()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+    <div class="mb-3 mt-3">
+      <label for="text" style="margin-bottom:5px"><b>Username <span class="bi bi-person-fill"> </span></b> </label>
+      <input type="text" class="form-control" placeholder="Enter your Username"  id="email" required [(ngModel)]="name">
+      <!--[(ngModel)]="candidateAge"-->
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="psw" style="margin-bottom:5px"> <b>Password
+          <i style="font-size: 14px;" class='fa fa-lock'></i></b></label>
+      <input type="password" class="form-control" placeholder="Enter your Password"  id="psw" required [(ngModel)]="password">
+      <!--[(ngModel)]="candidatePhone"-->
+      <button type="submit" class="  button9" (click)="login(0)">Login</button>
+    </div>
+    <label>
+      <input type="checkbox" name="remember"> Remember me
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span
+        class="psw">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forgot
+        <a href="#" style="color: rgb(30, 114, 241);">password?</a></span>
+    </label>
+
+
+  </div>
+
+
+
+</ng-template>
+
+<ng-template #signuptemplate>
+
+  <!-- Modal body -->
+  <div class="modal-body" style="background-color:#d612a5;color: white;">
+    <div class="mb-3 mt-3">
+      <button type="button" class="btn-close close" aria-label="Close" (click)="clear()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+      <h1 class="modal-title " style="margin-left:32%">Sign Up</h1>
+
+
+      <label for="text" style="margin-bottom:5px"> <b>Name</b></label>
+      <input type="text" class="form-control" placeholder="Enter Name" id="usr" required>
+      <!--[(ngModel)]="candidateName"-->
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="email" style="margin-bottom:5px"> <b>Email</b></label>
+      <input type="email" class="form-control" placeholder="Enter Email" id="email" required>
+      <!--[(ngModel)]="candidateName"-->
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="psw" style="margin-bottom:5px"> <b>Password</b></label>
+      <input type="password" class="form-control" placeholder="Enter Password" id="psw-repeat" required>
+      <!--[(ngModel)]="candidateAge"-->
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="psw-repeat" style="margin-bottom:5px"> <b>Repeat Password</b></label>
+      <input type="password" class="form-control" placeholder="Repeat Password" id="psw" required>
+      <!--[(ngModel)]="candidatePhone"-->
+    </div>
+
+    <label>
+      <input type="checkbox" name="remember"> Remember me
+    </label>
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue;margin-top: 5%;">Terms & Privacy</a>.
+    </p>
+    <button type="button" class=" btn-danger button" (click)="clear()">Close</button>
+    <button type="submit" class=" btn-success button">Sign Up</button>
+
+
+  </div>
+</ng-template>

@@ -1,0 +1,104 @@
+<!--car List-->
+<div class="container-fluid"
+    style="background-image: url('assets/bg4.jpg');background-repeat: no-repeat;background-size:contain;margin-top: 100px;">
+
+    <div class="row">
+        <div class="col-lg-12" style="margin-bottom: 50px;">
+            <div class="text-centre fl">
+                <button type="button" class="btn btn-danger" style="margin-top:50px"
+                    (click)="openModal(addpartstemplate,null)">
+                    ADD CAR PARTS
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+        <div class="col-lg-4">
+            <h1 style="text-align: center;color:rgb(255, 0, 0);font-family:Copperplate;">Parts List</h1>
+            <ol class="list-group ">
+                <li class="list-group-item list-group-item-warning list-group-item-action "
+                    *ngFor="let c of carList;let i=index"><img src="{{c.img}}" class="avatar1 "> &nbsp;&nbsp;{{ c.name1
+                    }} - ${{c.price}}
+                    <a  class="btn fl" (click)="selectItem(i)" style="font-family: Monospace;font-size:15px"><i
+                            class='fa fa-plus' style="color: black;"></i></a>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-4">
+            <h1 style="text-align: center;color:rgb(255, 0, 0);font-family:Copperplate;"><b> Cart</b></h1>
+            <div class="list-group panel-body">
+                <a class="list-group-item ist-group-item-warning list-group-item-action  "
+                    *ngFor="let car of cartList; let i = index">{{car.name1}} - Rs {{car.price}}
+                    <button class="btn fl" (click)="delete1(i);"><i class="fa fa-remove"
+                            style="color:#242424"></i></button>
+                </a>
+            </div>
+            <div class="row" style="margin-top:12px">
+                <div class="col-lg-6">
+                    <div class="list-group">
+                        <a class="list-group-item list-group-item-action ">Total = Rs {{totalCount}}</a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <button class="btn btn-success" (click)="placeOrder()">Place Order</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h1 style="text-align: center;color:rgb(255, 0, 0);font-family:Copperplate;"><b>Workshop</b></h1>
+            <div class="list-group panel-body">
+                <a class="list-group-item list-group-item-action  " *ngFor="let car of kitchen">{{car.name1}} </a>
+            </div>
+
+            <div class="col-lg-8" style="margin-top:12px">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action">Your Bill = Rs {{sum}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+<ng-template #addpartstemplate>
+<form>
+    <!-- Modal body -->
+    <div class="modal-body" style="background-color:#d612a5;color: white;">
+        <div class="modal-header">
+            <h4 class="modal-title">Add Car Parts</h4>
+            <button type="button" class="btn-close close" aria-label="Close" (click)="clear()">
+                <span aria-hidden="true" class="visually-hidden">&times;</span>
+            </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="usr">Part Name:</label>
+                <input type="text" class="form-control" id="usr" placeholder="Enter Part Name" [(ngModel)]="name1" name="name">
+            </div>
+            <div class="form-group">
+                <label for="text">Part Price:</label>
+                <input type="number" class="form-control" id="number"  [(ngModel)]="price" name="price">
+            </div>
+            <button type="submit" class="btn btn-success" style="margin-top:5px; " (click)="submit1()">Submit</button>
+            <button type="submit" class="btn btn-danger" style="margin-top:5px;margin-left: 5px;"
+                (click)="clear1()">Clear</button>
+        </div>
+    </div>
+</form>
+</ng-template>
